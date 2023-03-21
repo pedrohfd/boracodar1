@@ -1,5 +1,10 @@
+import { Player } from '../../components/Player'
 import { Container } from './styles'
 
 export const Home = () => {
-  return <Container></Container>
+  return (
+    <Container>
+      <Player />
+    </Container>
+  )
 }
