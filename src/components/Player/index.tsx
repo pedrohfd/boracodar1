@@ -51,6 +51,7 @@ export const Player = () => {
   const handleReload = () => {
     audioRef.current.load()
     audioRef.current.play()
+    setIsPlaying(true)
   }
 
   const handleTimeUpdate = () => {
