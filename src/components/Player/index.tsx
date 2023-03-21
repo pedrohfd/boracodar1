@@ -54,6 +54,11 @@ export const Player = () => {
     setIsPlaying(true)
   }
 
+  const handleChangeMusic = () => {
+    audioRef.current.load()
+    setIsPlaying(false)
+  }
+
   const handleTimeUpdate = () => {
     const currentTime = audioRef.current.currentTime
 
@@ -101,7 +106,11 @@ export const Player = () => {
             alt='play'
             onClick={handleToggleMusicState}
           />
-          <PlayForward src={PlayForwardIcon} alt='play-forward' />
+          <PlayForward
+            src={PlayForwardIcon}
+            alt='play-forward'
+            onClick={handleChangeMusic}
+          />
         </Controls>
 
         <TimeArea>
@@ -142,7 +151,11 @@ export const Player = () => {
               alt='play'
               onClick={handleToggleMusicState}
             />
-            <PlayForward src={PlayForwardIcon} alt='play-forward' />
+            <PlayForward
+              src={PlayForwardIcon}
+              alt='play-forward'
+              onClick={handleChangeMusic}
+            />
           </Controls>
 
           <TimeArea>
@@ -182,7 +195,11 @@ export const Player = () => {
               alt='play'
               onClick={handleToggleMusicState}
             />
-            <PlayForward src={PlayForwardIcon} alt='play-forward' />
+            <PlayForward
+              src={PlayForwardIcon}
+              alt='play-forward'
+              onClick={handleChangeMusic}
+            />
           </Controls>
         </PlayerArea3>
       </Right>
